@@ -23,7 +23,7 @@ datasets/
 - Each folder corresponds to one **Linux kernel submodule**.  
 - Inside each folder:
   - `*.c` / `*.h`: Original Linux kernel C source files  
-  - `*_bindgen.rs`: Rust header files generated from C using **bindgen**  
+  - `*.rs`: Rust header files generated from C using **bindgen**  
 
 ## 🔧 Usage
 1. Clone the repository:
