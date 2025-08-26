@@ -28,7 +28,7 @@ datasets/
 ## 🔧 Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/LinC2R-30.git
+   git clone https://github.com/LYC127/LinC2R-30.git
    cd LinC2R-30/datasets
    ```
 2. Navigate to a specific module (e.g., arc4/) to access its C source and the corresponding bindgen-generated Rust files.
