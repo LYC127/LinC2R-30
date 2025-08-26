@@ -35,15 +35,11 @@ datasets/
 3. Use the dataset for translation experiments, whether with C2Rust, other tools, or custom approaches for C→Rust migration.
 
 ## 🎯 Research Value
-Provides a lightweight, modular kernel dataset, lowering experimental complexity.
-
-Enables direct comparison between original C interfaces and Rust mappings.
-
-Serves as a benchmark for studying the general task of C→Rust translation.
-
-Useful for evaluating or training LLM-based code translation models and compiler-assisted migration tools.
+- Provides a **lightweight, modular kernel dataset**, lowering experimental complexity.  
+- Enables direct comparison between **original C interfaces** and **Rust mappings**.  
+- Serves as a benchmark for studying the **general task of C→Rust translation**.  
+- Useful for evaluating or training **LLM-based code translation models** and compiler-assisted migration tools.  
 
 ## 📌 Notes
-The dataset includes selected small modules from the Linux kernel and follows the Linux kernel open-source license (GPL-2.0).
-
-Intended for research and academic purposes only, not for production use.
+- The dataset includes selected small modules from the Linux kernel and follows the Linux kernel open-source license (GPL-2.0).  
+- Intended **for research and academic purposes only**, not for production use.  
