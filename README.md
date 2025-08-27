@@ -7,6 +7,7 @@ The dataset provides a **reproducible benchmark** for experiments, testing, and 
 
 ## 📂 Dataset Structure
 The dataset is organized as follows:
+```text
 datasets/
 │
 ├── arc4/ # arc4 encryption module
@@ -18,6 +19,7 @@ datasets/
 ├── crc32/ # CRC32 checksum
 ├── debug_lock/ # debug locking module
 ...
+```
 
 - Each folder corresponds to one **Linux kernel submodule**.  
 - Inside each folder:
@@ -27,10 +29,12 @@ datasets/
 
 ### 📊 Metrics
 The `metric/` directory contains Python scripts for evaluating translation quality and safety:
+```text
 metric/
 │
 ├── calculate_MML.py # Script to calculate Minimum Match Length (MML) metric
 ├── safe_ratio.py # Script to compute the ratio of safety-related translations
+```
 
 These metrics can be used to **quantify translation performance** and provide objective measures 
 
