@@ -60,10 +60,10 @@ metric/
 4. Use the scripts in metric/ to evaluate the quality and safety of translated outputs.
    ```bash
    # Calculate Minimum Match Length (MML)
-   python metric/calculate_MML.py datasets/arc4/arc4_bindgen.rs
+   python metric/calculate_MML.py
   
    # Compute safe translation ratio
-   python metric/safe_ratio.py datasets/arc4/arc4_bindgen.rs
+   python metric/safe_ratio.py
    ```
 
 ## 🎯 Research Value
