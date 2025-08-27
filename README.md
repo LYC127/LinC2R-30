@@ -19,11 +19,20 @@ datasets/
 ├── debug_lock/ # debug locking module
 ...
 
-
 - Each folder corresponds to one **Linux kernel submodule**.  
 - Inside each folder:
   - `*.c` / `*.h`: Original Linux kernel C source files  
-  - `*.rs`: Rust header files generated from C using **bindgen**  
+  - `*.rs`: Rust header files generated from C using **bindgen**
+ 
+
+### 📊 Metrics
+The `metric/` directory contains Python scripts for evaluating translation quality and safety:
+metric/
+│
+├── calculate_MML.py # Script to calculate Minimum Match Length (MML) metric
+├── safe_ratio.py # Script to compute the ratio of safety-related translations
+
+These metrics can be used to **quantify translation performance** and provide objective measures 
 
 ## 🔧 Usage
 1. Clone the repository:
@@ -33,6 +42,14 @@ datasets/
    ```
 2. Navigate to a specific module (e.g., arc4/) to access its C source and the corresponding bindgen-generated Rust files.
 3. Use the dataset for translation experiments, whether with C2Rust, other tools, or custom approaches for C→Rust migration.
+4. Use the scripts in metric/ to evaluate the quality and safety of translated outputs.
+   ```bash
+   # Calculate Minimum Match Length (MML)
+   python metric/calculate_MML.py datasets/arc4/arc4_bindgen.rs
+  
+   # Compute safe translation ratio
+   python metric/safe_ratio.py datasets/arc4/arc4_bindgen.rs
+   ```
 
 ## 🎯 Research Value
 - Provides a **lightweight, modular kernel dataset**, lowering experimental complexity.  
