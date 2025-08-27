@@ -27,16 +27,27 @@ datasets/
   - `*.rs`: Rust header files generated from C using **bindgen**
  
 
-### 📊 Metrics
+## 📊 Metrics
 The `metric/` directory contains Python scripts for evaluating translation quality and safety:
 ```text
 metric/
 │
-├── calculate_MML.py # Script to calculate Minimum Match Length (MML) metric
-├── safe_ratio.py # Script to compute the ratio of safety-related translations
+├── calculate_MML.py # Script to calculate Manually Modified Lines (MML) metric
+├── safe_ratio.py # Script to calculate Safe Code (SC) metric
 ```
+- **Manually Modified Lines (MML)**  
+  - **Definition:** Measures the proportion of lines in the translated code that still require manual modification to compile successfully.  
+  - **How it’s computed:**  
+    1. We manually fix the translated output until it compiles (ground truth).  
+    2. Compare the fixed version against the raw translation line by line.  
+    3. MML = (number of differing lines) ÷ (total lines of translated code).  
+  - **Interpretation:** A lower MML means less manual effort is needed, indicating higher translation quality.  
 
-These metrics can be used to **quantify translation performance** and provide objective measures 
+- **Safe Code (SC)**  
+  - **Definition:** Measures the proportion of lines in the translated code that comply with Rust’s memory safety rules.  
+  - **How it’s computed:**  
+    - SC = (# of memory-safe lines) ÷ (total lines of translated code).  
+  - **Interpretation:** A higher SC indicates better adherence to Rust’s safety guarantees.  
 
 ## 🔧 Usage
 1. Clone the repository:
