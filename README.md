@@ -32,16 +32,16 @@ The `metric/` directory contains Python scripts for evaluating translation quali
 ```text
 metric/
 │
-├── calculate_CSR.py # Script to calculate Manually Modified Lines (MML) metric
-├── safe_ratio.py # Script to calculate Safe Code (SC) metric
+├── calculate_CSR.py # Script to calculate Compilation Success Rate (CSR) metric
+├── safe_ratio.py    # Script to calculate Safe Code (SC) metric
 ```
-- **Manually Modified Lines (MML)**  
-  - **Definition:** Measures the proportion of lines in the translated code that still require manual modification to compile successfully.  
+- **Compilation Success Rate (CSR)**  
+  - **Definition:** Measures the proportion of translated code that compiles successfully.
   - **How it’s computed:**  
-    1. We manually fix the translated output until it compiles (ground truth).  
-    2. Compare the fixed version against the raw translation line by line.  
-    3. MML = (number of differing lines) ÷ (total lines of translated code).  
-  - **Interpretation:** A lower MML means less manual effort is needed, indicating higher translation quality.  
+    1. Translate the C module into Rust.
+    2. Compile the translated output.
+    3. CSR = (number of successfully compiled lines) ÷ (total lines of translated code).
+  - **Interpretation:** A higher CSR indicates better translation quality with fewer compilation errors.
 
 - **Safe Code (SC)**  
   - **Definition:** Measures the proportion of lines in the translated code that comply with Rust’s memory safety rules.  
@@ -59,8 +59,8 @@ metric/
 3. Use the dataset for translation experiments, whether with C2Rust, other tools, or custom approaches for C→Rust migration.
 4. Use the scripts in metric/ to evaluate the quality and safety of translated outputs.
    ```bash
-   # Calculate Minimum Match Length (MML)
-   python metric/calculate_MML.py
+   # Calculate Compilation Success Rate (CSR)
+   python metric/calculate_CSR.py
   
    # Compute safe translation ratio
    python metric/safe_ratio.py
