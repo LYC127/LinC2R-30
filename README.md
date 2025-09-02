@@ -32,7 +32,7 @@ The `metric/` directory contains Python scripts for evaluating translation quali
 ```text
 metric/
 │
-├── calculate_MML.py # Script to calculate Manually Modified Lines (MML) metric
+├── calculate_CSR.py # Script to calculate Manually Modified Lines (MML) metric
 ├── safe_ratio.py # Script to calculate Safe Code (SC) metric
 ```
 - **Manually Modified Lines (MML)**  
