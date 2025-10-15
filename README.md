@@ -74,4 +74,14 @@ metric/
 
 ## 📌 Notes
 - The dataset includes selected small modules from the Linux kernel and follows the Linux kernel open-source license (GPL-2.0).  
-- Intended **for research and academic purposes only**, not for production use.  
+- Intended **for research and academic purposes only**, not for production use.
+
+## 👥 Contributors
+
+The LinC2R-30 dataset is an open-source benchmark for C→Rust translation,  
+developed by the following contributors:
+
+| Name | Affiliation |
+|------|--------------|
+| 闪英迪 | Department of Computer Science and Technology, Tsinghua University |
+| 刘禹辰 | School of Electronics Engineering and Computer Science, Peking University |
