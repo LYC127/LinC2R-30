@@ -83,5 +83,6 @@ developed by the following contributors:
 
 | Name | Affiliation |
 |------|--------------|
+| Wei Yang | Fudan University Institute of Systems for Advanced Computing |
 | Yingdi Shan | Department of Computer Science and Technology, Tsinghua University |
 | Yuchen Liu | School of Electronics Engineering and Computer Science, Peking University |
