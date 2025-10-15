@@ -83,5 +83,5 @@ developed by the following contributors:
 
 | Name | Affiliation |
 |------|--------------|
-| 闪英迪 | Department of Computer Science and Technology, Tsinghua University |
-| 刘禹辰 | School of Electronics Engineering and Computer Science, Peking University |
+| Yingdi Shan | Department of Computer Science and Technology, Tsinghua University |
+| Yuchen Liu | School of Electronics Engineering and Computer Science, Peking University |
